@@ -19,7 +19,7 @@ const StephAndJonsRomeTrip = () => {
   const [budgetFilter, setBudgetFilter] = useState('all');
   const [sortBy, setSortBy] = useState('price');
 
-  // Romantic neighborhood data with couple-focused highlights
+  // Romantic neighborhood data with couple-focused highlights and beautiful images
   const neighborhoods = [
     {
       id: 'trastevere',
@@ -30,7 +30,9 @@ const StephAndJonsRomeTrip = () => {
       highlights: ['Sunset walks', 'Intimate dining', 'Street musicians', 'Cozy wine bars'],
       walkingDistance: 'Hand-in-hand walks to all major attractions',
       color: 'bg-rose-50 border-rose-200 text-rose-800',
-      coupleNote: 'Most romantic neighborhood - perfect for evening aperitivos together!'
+      coupleNote: 'Most romantic neighborhood - perfect for evening aperitivos together!',
+      backgroundImage: 'https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=600&h=300&fit=crop&crop=center',
+      imageAlt: 'Romantic cobblestone streets of Trastevere at sunset'
     },
     {
       id: 'centro-storico',
@@ -41,7 +43,9 @@ const StephAndJonsRomeTrip = () => {
       highlights: ['Trevi Fountain wishes', 'Pantheon selfies', 'Gelato dates', 'Piazza moments'],
       walkingDistance: 'Everything within a romantic stroll',
       color: 'bg-purple-50 border-purple-200 text-purple-800',
-      coupleNote: 'Perfect for creating those dreamy vacation memories!'
+      coupleNote: 'Perfect for creating those dreamy vacation memories!',
+      backgroundImage: 'https://images.unsplash.com/photo-1531572753322-ad063cecc140?w=600&h=300&fit=crop&crop=center',
+      imageAlt: 'Historic Pantheon and ancient Roman architecture'
     },
     {
       id: 'monti',
@@ -52,7 +56,9 @@ const StephAndJonsRomeTrip = () => {
       highlights: ['Morning espressos', 'Vintage shopping', 'Local artisans', 'Quiet corners'],
       walkingDistance: 'Colosseum for epic couple photos',
       color: 'bg-amber-50 border-amber-200 text-amber-800',
-      coupleNote: 'Great for lazy mornings and discovering hidden gems together!'
+      coupleNote: 'Great for lazy mornings and discovering hidden gems together!',
+      backgroundImage: 'https://images.unsplash.com/photo-1555992643-33606d653c5c?w=600&h=300&fit=crop&crop=center',
+      imageAlt: 'Cozy Roman café with intimate atmosphere'
     },
     {
       id: 'campo-de-fiori',
@@ -63,11 +69,13 @@ const StephAndJonsRomeTrip = () => {
       highlights: ['Market browsing', 'Wine tastings', 'Rooftop dining', 'Late night bars'],
       walkingDistance: 'Food adventures and romantic dining',
       color: 'bg-orange-50 border-orange-200 text-orange-800',
-      coupleNote: 'Cook together with fresh market finds or enjoy romantic dinners!'
+      coupleNote: 'Cook together with fresh market finds or enjoy romantic dinners!',
+      backgroundImage: 'https://images.unsplash.com/photo-1586796676765-f7f6d23bcc60?w=600&h=300&fit=crop&crop=center',
+      imageAlt: 'Vibrant Campo de Fiori market with fresh produce'
     }
   ];
 
-  // Romantic properties with couple-focused descriptions
+  // Romantic properties with couple-focused descriptions and beautiful images
   const allProperties = [
     // Trastevere romantic properties
     {
@@ -81,7 +89,9 @@ const StephAndJonsRomeTrip = () => {
       url: 'https://www.airbnb.com/rooms/18684769',
       badges: ['Guest favorite', 'Couple-friendly'],
       highlight: 'AMAZING VALUE',
-      romanticNote: 'Cozy hideaway perfect for romantic mornings together!'
+      romanticNote: 'Cozy hideaway perfect for romantic mornings together!',
+      imageUrl: 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=500&h=300&fit=crop&crop=center',
+      imageAlt: 'Cozy romantic apartment interior with warm lighting'
     },
     {
       id: '3674909',
@@ -94,7 +104,9 @@ const StephAndJonsRomeTrip = () => {
       url: 'https://www.airbnb.com/rooms/3674909',
       badges: ['Guest favorite', 'Perfect location'],
       highlight: 'COUPLES CHOICE',
-      romanticNote: 'Right in the heart of romance - evening strolls await!'
+      romanticNote: 'Right in the heart of romance - evening strolls await!',
+      imageUrl: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=500&h=300&fit=crop&crop=center',
+      imageAlt: 'Beautiful Trastevere apartment with romantic ambiance'
     },
     {
       id: '690094631431468796',
@@ -106,7 +118,9 @@ const StephAndJonsRomeTrip = () => {
       reviews: 219,
       url: 'https://www.airbnb.com/rooms/690094631431468796',
       badges: ['Guest favorite', 'Highly rated'],
-      romanticNote: 'Intimate setting with everything you need for a romantic getaway!'
+      romanticNote: 'Intimate setting with everything you need for a romantic getaway!',
+      imageUrl: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500&h=300&fit=crop&crop=center',
+      imageAlt: 'Intimate apartment perfect for couples in Trastevere'
     },
     // Centro Storico romantic properties
     {
@@ -120,7 +134,9 @@ const StephAndJonsRomeTrip = () => {
       url: 'https://www.airbnb.com/rooms/5190142',
       badges: ['Guest favorite', 'Historic charm'],
       features: ['1 min to attractions', 'Photo opportunities'],
-      romanticNote: 'Ancient Rome as your backdrop for unforgettable memories!'
+      romanticNote: 'Ancient Rome as your backdrop for unforgettable memories!',
+      imageUrl: 'https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?w=500&h=300&fit=crop&crop=center',
+      imageAlt: 'Historic Roman apartment near ancient monuments'
     },
     {
       id: '1418094071668071334',
@@ -133,7 +149,9 @@ const StephAndJonsRomeTrip = () => {
       url: 'https://www.airbnb.com/rooms/1418094071668071334',
       badges: ['New listing', 'Pantheon view'],
       features: ['Pantheon view', '3 min walk', 'Brand new'],
-      romanticNote: 'Wake up to views of ancient wonders - pure magic!'
+      romanticNote: 'Wake up to views of ancient wonders - pure magic!',
+      imageUrl: 'https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=500&h=300&fit=crop&crop=center',
+      imageAlt: 'Apartment with stunning Pantheon view'
     },
     {
       id: '15728405',
@@ -146,7 +164,9 @@ const StephAndJonsRomeTrip = () => {
       url: 'https://www.airbnb.com/rooms/15728405',
       badges: ['Superhost', 'Designer style'],
       features: ['Designer apartment', '3 min to Pantheon', 'Luxury'],
-      romanticNote: 'Elegant and stylish - perfect for your special getaway!'
+      romanticNote: 'Elegant and stylish - perfect for your special getaway!',
+      imageUrl: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=500&h=300&fit=crop&crop=center',
+      imageAlt: 'Luxury designer apartment with modern amenities'
     },
     // Monti cozy properties
     {
@@ -160,7 +180,9 @@ const StephAndJonsRomeTrip = () => {
       url: 'https://www.airbnb.com/rooms/756955945026441991',
       badges: ['Modern style', 'Great value'],
       highlight: 'BUDGET ROMANCE',
-      romanticNote: 'Modern comfort with ancient views - best of both worlds!'
+      romanticNote: 'Modern comfort with ancient views - best of both worlds!',
+      imageUrl: 'https://images.unsplash.com/photo-1493663284031-b7e3aaa4b624?w=500&h=300&fit=crop&crop=center',
+      imageAlt: 'Modern loft apartment with Colosseum views'
     },
     {
       id: '3260174',
@@ -172,7 +194,9 @@ const StephAndJonsRomeTrip = () => {
       reviews: 585,
       url: 'https://www.airbnb.com/rooms/3260174',
       badges: ['Guest favorite', 'Highly rated'],
-      romanticNote: 'Steps from gladiator history - create your own epic love story!'
+      romanticNote: 'Steps from gladiator history - create your own epic love story!',
+      imageUrl: 'https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=500&h=300&fit=crop&crop=center',
+      imageAlt: 'Cozy apartment near the historic Colosseum'
     },
     {
       id: '19896319',
@@ -184,7 +208,9 @@ const StephAndJonsRomeTrip = () => {
       reviews: 409,
       url: 'https://www.airbnb.com/rooms/19896319',
       badges: ['Guest favorite', 'Vintage charm'],
-      romanticNote: 'Vintage vibes perfect for nostalgic lovebirds!'
+      romanticNote: 'Vintage vibes perfect for nostalgic lovebirds!',
+      imageUrl: 'https://images.unsplash.com/photo-1556020685-ae41abfc9365?w=500&h=300&fit=crop&crop=center',
+      imageAlt: 'Vintage-styled apartment with retro charm'
     },
     // Campo de' Fiori foodie properties
     {
@@ -197,7 +223,9 @@ const StephAndJonsRomeTrip = () => {
       reviews: 365,
       url: 'https://www.airbnb.com/rooms/26195032',
       badges: ['Guest favorite', 'Food lovers'],
-      romanticNote: 'Market mornings and wine evenings - a foodie couple dream!'
+      romanticNote: 'Market mornings and wine evenings - a foodie couple dream!',
+      imageUrl: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e?w=500&h=300&fit=crop&crop=center',
+      imageAlt: 'Charming apartment near vibrant food market'
     },
     {
       id: '1264318516681770937',
@@ -209,7 +237,9 @@ const StephAndJonsRomeTrip = () => {
       reviews: 25,
       url: 'https://www.airbnb.com/rooms/1264318516681770937',
       badges: ['Guest favorite', 'Perfect rating'],
-      romanticNote: 'Brand new with perfect reviews - your romantic debut awaits!'
+      romanticNote: 'Brand new with perfect reviews - your romantic debut awaits!',
+      imageUrl: 'https://images.unsplash.com/photo-1595846519845-68e298c2edd8?w=500&h=300&fit=crop&crop=center',
+      imageAlt: 'Beautiful new apartment in Campo de Fiori'
     },
     {
       id: '49361107',
@@ -221,7 +251,9 @@ const StephAndJonsRomeTrip = () => {
       reviews: 122,
       url: 'https://www.airbnb.com/rooms/49361107',
       badges: ['Superhost', 'Cozy atmosphere'],
-      romanticNote: 'Intimate and warm - perfect for candlelit dinners at home!'
+      romanticNote: 'Intimate and warm - perfect for candlelit dinners at home!',
+      imageUrl: 'https://images.unsplash.com/photo-1598928506311-c55ded91a20c?w=500&h=300&fit=crop&crop=center',
+      imageAlt: 'Warm and cozy apartment perfect for intimate evenings'
     }
   ];
 
@@ -338,9 +370,21 @@ const StephAndJonsRomeTrip = () => {
           {neighborhoods.map((neighborhood) => (
             <div 
               key={neighborhood.id}
-              className={`p-6 rounded-xl border-2 ${neighborhood.color} cursor-pointer transition-all hover:shadow-lg hover:scale-105 transform`}
+              className={`relative p-6 rounded-xl border-2 ${neighborhood.color} cursor-pointer transition-all hover:shadow-lg hover:scale-105 transform overflow-hidden`}
               onClick={() => setSelectedNeighborhood(neighborhood.id)}
             >
+              {/* Background Image */}
+              <div 
+                className="absolute inset-0 opacity-20"
+                style={{
+                  backgroundImage: `url(${neighborhood.backgroundImage})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                }}
+              />
+              
+              {/* Content overlay */}
+              <div className="relative z-10">
               <div className="flex items-center gap-3 mb-3">
                 {neighborhood.icon}
                 <h3 className="font-bold text-xl">{neighborhood.name}</h3>
@@ -371,6 +415,7 @@ const StephAndJonsRomeTrip = () => {
                 <p className="text-xs italic text-gray-700">
                   💡 <strong>For You Two:</strong> {neighborhood.coupleNote}
                 </p>
+              </div>
               </div>
             </div>
           ))}
@@ -451,88 +496,107 @@ const StephAndJonsRomeTrip = () => {
             const neighborhood = neighborhoods.find(n => n.id === property.neighborhood);
             
             return (
-              <div key={property.id} className="border border-gray-200 rounded-lg p-4 hover:shadow-lg transition-shadow">
-                {/* Property Header */}
-                <div className="flex justify-between items-start mb-3">
-                  <div className="flex-1">
-                    <h3 className="font-semibold text-lg text-gray-900 mb-1">
-                      {property.name}
-                    </h3>
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className={`text-xs px-2 py-1 rounded-full ${neighborhood?.color || 'bg-gray-100 text-gray-800'}`}>
-                        {neighborhood?.name}
+              <div key={property.id} className="border border-gray-200 rounded-xl p-0 hover:shadow-xl transition-all duration-300 overflow-hidden bg-white">
+                {/* Property Image */}
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src={property.imageUrl} 
+                    alt={property.imageAlt}
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                    loading="lazy"
+                  />
+                  {/* Overlay with highlight badge */}
+                  {property.highlight && (
+                    <div className="absolute top-3 left-3">
+                      <span className="px-3 py-1 bg-rose-500 text-white text-xs font-bold rounded-full shadow-lg">
+                        {property.highlight}
                       </span>
-                      <span className={`text-xs px-2 py-1 rounded-full ${getBudgetBadge(property.price)}`}>
-                        {getBudgetText(property.price)}
-                      </span>
-                      {property.highlight && (
-                        <span className="text-xs px-2 py-1 bg-red-100 text-red-800 rounded-full font-medium">
-                          {property.highlight}
-                        </span>
-                      )}
-                    </div>
-                  </div>
-                </div>
-
-                {/* Property Details */}
-                <div className="space-y-2 mb-4">
-                  {/* Price and Rating */}
-                  <div className="flex justify-between items-center">
-                    <div>
-                      <span className="text-2xl font-bold text-gray-900">${property.price}</span>
-                      <span className="text-gray-600 text-sm"> total</span>
-                      <div className="text-sm text-gray-600">${property.pricePerNight}/night</div>
-                    </div>
-                    <div className="text-right">
-                      {property.rating > 0 ? (
-                        <>
-                          <div className="flex items-center gap-1">
-                            <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                            <span className="font-medium">{property.rating}</span>
-                          </div>
-                          <div className="text-sm text-gray-600">{property.reviews} reviews</div>
-                        </>
-                      ) : (
-                        <div className="text-sm text-gray-600">New listing</div>
-                      )}
-                    </div>
-                  </div>
-
-                  {/* Badges and Features */}
-                  <div className="flex flex-wrap gap-2">
-                    {property.badges.map((badge, index) => (
-                      <span key={index} className="text-xs px-2 py-1 bg-blue-100 text-blue-800 rounded-full">
-                        {badge}
-                      </span>
-                    ))}
-                    {property.features?.map((feature, index) => (
-                      <span key={index} className="text-xs px-2 py-1 bg-gray-100 text-gray-700 rounded-full">
-                        {feature}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* Romantic Note */}
-                  {property.romanticNote && (
-                    <div className="bg-rose-50 border border-rose-200 p-3 rounded-lg">
-                      <p className="text-xs text-rose-700 italic flex items-start gap-1">
-                        <Heart className="w-3 h-3 fill-rose-400 text-rose-400 mt-0.5 flex-shrink-0" />
-                        {property.romanticNote}
-                      </p>
                     </div>
                   )}
+                  {/* Price overlay */}
+                  <div className="absolute bottom-3 right-3 bg-white bg-opacity-95 rounded-lg px-3 py-1 shadow-md">
+                    <span className="text-lg font-bold text-gray-900">${property.price}</span>
+                    <span className="text-xs text-gray-600"> total</span>
+                  </div>
                 </div>
 
-                {/* Book Your Love Nest Button */}
-                <a 
-                  href={property.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full bg-gradient-to-r from-rose-500 to-purple-600 hover:from-rose-600 hover:to-purple-700 text-white py-3 px-4 rounded-lg transition-all transform hover:scale-105 flex items-center justify-center gap-2 font-semibold shadow-md"
-                >
-                  Book Our Love Nest 💕
-                  <ExternalLink className="w-4 h-4" />
-                </a>
+                {/* Property Content */}
+                <div className="p-4">
+                  {/* Property Header */}
+                  <div className="flex justify-between items-start mb-3">
+                    <div className="flex-1">
+                      <h3 className="font-semibold text-lg text-gray-900 mb-1 line-clamp-2">
+                        {property.name}
+                      </h3>
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className={`text-xs px-2 py-1 rounded-full ${neighborhood?.color || 'bg-gray-100 text-gray-800'}`}>
+                          {neighborhood?.name}
+                        </span>
+                        <span className={`text-xs px-2 py-1 rounded-full ${getBudgetBadge(property.price)}`}>
+                          {getBudgetText(property.price)}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Property Details */}
+                  <div className="space-y-3 mb-4">
+                    {/* Rating and Per Night Price */}
+                    <div className="flex justify-between items-center">
+                      <div className="text-sm text-gray-600">
+                        ${property.pricePerNight}/night
+                      </div>
+                      <div className="text-right">
+                        {property.rating > 0 ? (
+                          <>
+                            <div className="flex items-center gap-1">
+                              <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                              <span className="font-medium">{property.rating}</span>
+                            </div>
+                            <div className="text-sm text-gray-600">{property.reviews} reviews</div>
+                          </>
+                        ) : (
+                          <div className="text-sm text-gray-600">New listing</div>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Badges and Features */}
+                    <div className="flex flex-wrap gap-2">
+                      {property.badges.map((badge, index) => (
+                        <span key={index} className="text-xs px-2 py-1 bg-blue-100 text-blue-800 rounded-full">
+                          {badge}
+                        </span>
+                      ))}
+                      {property.features?.map((feature, index) => (
+                        <span key={index} className="text-xs px-2 py-1 bg-gray-100 text-gray-700 rounded-full">
+                          {feature}
+                        </span>
+                      ))}
+                    </div>
+
+                    {/* Romantic Note */}
+                    {property.romanticNote && (
+                      <div className="bg-rose-50 border border-rose-200 p-3 rounded-lg">
+                        <p className="text-xs text-rose-700 italic flex items-start gap-1">
+                          <Heart className="w-3 h-3 fill-rose-400 text-rose-400 mt-0.5 flex-shrink-0" />
+                          {property.romanticNote}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Book Your Love Nest Button */}
+                  <a 
+                    href={property.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full bg-gradient-to-r from-rose-500 to-purple-600 hover:from-rose-600 hover:to-purple-700 text-white py-3 px-4 rounded-lg transition-all transform hover:scale-105 flex items-center justify-center gap-2 font-semibold shadow-md"
+                  >
+                    Book Our Love Nest 💕
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                </div>
               </div>
             );
           })}
