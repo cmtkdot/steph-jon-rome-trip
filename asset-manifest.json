@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/steph-jon-rome-trip/static/css/main.fdf05680.css",
+    "main.js": "/steph-jon-rome-trip/static/js/main.e9ecf850.js",
+    "index.html": "/steph-jon-rome-trip/index.html",
+    "main.fdf05680.css.map": "/steph-jon-rome-trip/static/css/main.fdf05680.css.map",
+    "main.e9ecf850.js.map": "/steph-jon-rome-trip/static/js/main.e9ecf850.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fdf05680.css",
+    "static/js/main.e9ecf850.js"
+  ]
+}
